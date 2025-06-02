@@ -1,4 +1,3 @@
-
 import { Navbar } from '@/components/Navbar';
 import { DashboardSidebar } from '@/components/DashboardSidebar';
 import { Card } from '@/components/ui/card';
@@ -139,7 +138,6 @@ const DashboardSEO = () => {
                         stroke="#ef4444" 
                         strokeWidth={3}
                         name="Avg Position"
-                        yAxisId="position"
                       />
                       <Line 
                         type="monotone" 
@@ -147,7 +145,6 @@ const DashboardSEO = () => {
                         stroke="#3b82f6" 
                         strokeWidth={3}
                         name="Clicks"
-                        yAxisId="clicks"
                       />
                     </LineChart>
                   </ResponsiveContainer>
