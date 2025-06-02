@@ -23,9 +23,11 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">TS</span>
-              </div>
+              <img 
+                src="/lovable-uploads/86893be9-23f1-461d-9206-9e8c008fc1fe.png" 
+                alt="Tari Socials" 
+                className="w-8 h-8 object-contain"
+              />
               <span className="text-xl font-bold text-gray-900">Tari Socials</span>
             </Link>
           </div>
@@ -39,8 +41,8 @@ export const Navbar = () => {
                   to={item.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? 'text-green-700 bg-green-50'
+                      : 'text-gray-700 hover:text-green-700 hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
@@ -50,11 +52,11 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" className="border-green-700 text-green-700 hover:bg-green-50">
               <User className="w-4 h-4 mr-2" />
               Sign In
             </Button>
-            <Button size="sm" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+            <Button size="sm" className="bg-green-700 hover:bg-green-800 text-white">
               Get Started
             </Button>
           </div>
@@ -81,8 +83,8 @@ export const Navbar = () => {
                 to={item.href}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   isActive(item.href)
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    ? 'text-green-700 bg-green-50'
+                    : 'text-gray-700 hover:text-green-700 hover:bg-gray-50'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -90,11 +92,11 @@ export const Navbar = () => {
               </Link>
             ))}
             <div className="pt-4 border-t border-gray-200 space-y-2">
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="w-full border-green-700 text-green-700 hover:bg-green-50">
                 <User className="w-4 h-4 mr-2" />
                 Sign In
               </Button>
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600">
+              <Button className="w-full bg-green-700 hover:bg-green-800 text-white">
                 Get Started
               </Button>
             </div>
