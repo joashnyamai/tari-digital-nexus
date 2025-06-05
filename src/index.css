@@ -105,66 +105,185 @@
   }
 }
 
-/* Enhanced Motion Graphics */
+/* Professional Digital Marketing Platform Motion Graphics */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(1deg); }
+  50% { transform: translateY(-15px) rotate(0deg); }
+  75% { transform: translateY(-8px) rotate(-1deg); }
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
-  50% { box-shadow: 0 0 30px rgba(239, 68, 68, 0.8), 0 0 40px rgba(34, 197, 94, 0.3); }
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3), 0 0 40px rgba(239, 68, 68, 0.2);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.5), 0 0 60px rgba(239, 68, 68, 0.4);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+  0% { 
+    background-position: -200% 0; 
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% { 
+    background-position: 200% 0; 
+    transform: scale(1);
+  }
 }
 
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
   100% { background-position: 0% 50%; }
+}
+
+@keyframes digital-pulse {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes marketing-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  60% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+@keyframes data-flow {
+  0% {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes power-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(34, 197, 94, 0.4),
+      0 0 40px rgba(239, 68, 68, 0.3),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(34, 197, 94, 0.6),
+      0 0 80px rgba(239, 68, 68, 0.5),
+      inset 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes text-reveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes magnetic-hover {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.05);
+  }
 }
 
 @layer utilities {
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
   
   .animate-glow {
-    animation: glow 2s ease-in-out infinite;
+    animation: glow 3s ease-in-out infinite;
   }
   
   .animate-shimmer {
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
     background-size: 200% 100%;
-    animation: shimmer 2s infinite;
+    animation: shimmer 3s infinite;
   }
   
   .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
+    background-size: 300% 300%;
+    animation: gradient-shift 6s ease infinite;
   }
 
-  .hover-lift {
+  .animate-digital-pulse {
+    animation: digital-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-marketing-bounce {
+    animation: marketing-bounce 1.5s ease-in-out infinite;
+  }
+
+  .animate-data-flow {
+    animation: data-flow 4s linear infinite;
+  }
+
+  .animate-power-glow {
+    animation: power-glow 4s ease-in-out infinite;
+  }
+
+  .animate-text-reveal {
+    animation: text-reveal 1.2s ease-out forwards;
+  }
+
+  .animate-magnetic-hover {
     transition: all 0.3s ease;
   }
   
-  .hover-lift:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  .animate-magnetic-hover:hover {
+    animation: magnetic-hover 0.6s ease-in-out;
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+
+  .professional-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+  }
+  
+  .professional-card:hover {
+    transform: translateY(-12px) rotateX(5deg) rotateY(5deg) scale(1.03);
+    box-shadow: 
+      0 25px 50px rgba(0,0,0,0.1),
+      0 0 30px rgba(34, 197, 94, 0.2),
+      0 0 60px rgba(239, 68, 68, 0.1);
   }
 
   .stagger-animation > * {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fade-in 0.6s ease forwards;
+    transform: translateY(30px) scale(0.9);
+    animation: professional-fade-in 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   }
   
   .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
@@ -172,4 +291,97 @@
   .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
   .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
   .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+
+  .digital-grid {
+    background-image: 
+      linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: grid-flow 20s linear infinite;
+  }
+
+  .power-button {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .power-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .power-button:hover::before {
+    left: 100%;
+  }
+
+  .power-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+      0 15px 35px rgba(0,0,0,0.2),
+      0 0 20px rgba(34, 197, 94, 0.3);
+  }
+}
+
+@keyframes professional-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes grid-flow {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 20px 20px, 20px 20px;
+  }
+}
+
+/* Particle effect background */
+.particle-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(239, 68, 68, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px;
+  animation: particle-float 15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  33% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  66% {
+    transform: translateY(5px) translateX(-5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
 }
