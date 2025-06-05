@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, User, Star, Phone } from 'lucide-react';
+import { Menu, X, User, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const Navbar = () => {
@@ -19,15 +19,6 @@ export const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm">
-      {/* Enhanced special offer banner */}
-      <div className="bg-gradient-to-r from-red-600 to-red-500 text-white text-center py-2 text-sm font-semibold animate-gradient">
-        <div className="flex items-center justify-center space-x-2">
-          <Star className="w-4 h-4 animate-marketing-bounce" />
-          <span>🔥 LIMITED TIME: 50% OFF + Free Setup Worth $2,000!</span>
-          <Star className="w-4 h-4 animate-marketing-bounce" style={{ animationDelay: '0.5s' }} />
-        </div>
-      </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
